@@ -1,0 +1,50 @@
+<html>
+  <head>
+      <title>
+      </title>
+  </head>
+   <body>
+     <p> 
+       <select name="bgColor" id="bgColor">
+         <option value="green">Green</option>
+         <option value="blue">Blue</option>
+        </select>
+        <button type="submit" id="b-cancel">Cancel</button>
+        <button type="submit" id="b-submit">Send</button>
+     </p>
+     
+<script>
+	    function saveOptions() {
+		
+        var options = {
+          'bgColor': $("#bgColor").val()		  
+        }
+        return options;
+      }
+
+      $().ready(function() {
+        $("#b-cancel").click(function() {
+          console.log("Button Cancel gedrückt");
+          document.location = "pebblejs://close";
+        });
+		
+        $("#b-submit").click(function() {
+          console.log("Button Submit gedrückt");
+
+		  var options = saveOptions();
+          var location = "pebblejs://close#" + encodeURIComponent(JSON.stringify(options));
+          //console.log("Warping to: " + location);
+          //console.log(location);
+          document.location = location;
+        });
+		
+		//an die Webseite übergebene Variablenwerte im aktuellen Formular ablegen
+        var obj = jQuery.parseJSON(decodeURIComponent(window.location.search.substring(1)));
+        for(key in obj) {
+          $("#"+[key]).val(obj[key]);        
+        }
+
+      });   
+    </script>
+   </body>
+  </html>
