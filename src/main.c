@@ -29,22 +29,10 @@ static char *setBgColor;
 void in_recv_handler(DictionaryIterator *iterator, void *context)
 {
   app_log(APP_LOG_LEVEL_DEBUG, "main.c", 0, "###in_recv_handler:  Aufgerufen ###");
-  
-  
   Tuple *bgTuple = dict_find(iterator, bgColor);
-//  char bgColor = bgTuple->value->cstring;
   if (bgTuple) {
     app_log(APP_LOG_LEVEL_DEBUG, "main.c", 0, "###in_recv_handler: text %s ###",  bgTuple->value->cstring);
-    //text_layer_set_text(spickertext_layer, bgTuple->value->cstring);
-  setBgColor = bgTuple->value->cstring;
- //   if(strcmp(bgTuple->value->cstring, "blue") == 0){
-   //  setBgColor = "blue";
-   // } else if(strcmp(bgTuple->value->cstring, "green") == 0){
-    //  setBgColor = "green";
-    //} else {
-    //  setBgColor = "black";
-  //  }
-    
+    setBgColor = bgTuple->value->cstring;
   } 
 }
 
@@ -163,21 +151,7 @@ static void battery_handler(BatteryChargeState new_state) {
 // ++++++ load content ++++++  
 static void window_load(Window *my_window){
   
-  
-  
-  
-  
-  //settings
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
+ 
   // ++++++ create fonts ++++++
   sf_bold = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_SF_BOLD_62));
   sf = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_SF_18));
@@ -353,32 +327,12 @@ static void window_unload(Window *my_window){
 }
 
 
-
-
-
-
-// +++++++ settings +++++++
-
-
-
-
-
-
-
-
-
 static void init(void) {
   
   // ++++++ create window +++++++
   my_window = window_create();
   
   // ++++++ set Window Color ++++++
- // #ifdef PBL_COLOR
- //   bg_color = GColorBlack;  
- // window_set_background_color(my_window, bg_color);
- //#endif
-  
-  
   if(strcmp(setBgColor, "green") == 0){
     window_set_background_color(my_window, GColorGreen);
   } else if(strcmp(setBgColor, "blue") == 0){
@@ -386,7 +340,6 @@ static void init(void) {
   } else {
         window_set_background_color(my_window, GColorBlack);
   }
-  
   
    window_set_window_handlers(my_window, (WindowHandlers){
     .load = window_load,
@@ -407,16 +360,11 @@ static void init(void) {
   update_wd();
   
   
-  
-  
-  
   //setings
 app_message_register_inbox_received((AppMessageInboxReceived) in_recv_handler);
   app_message_open(app_message_inbox_size_maximum(), 0);
   
-  
-  
-  
+ 
 }
 
 
