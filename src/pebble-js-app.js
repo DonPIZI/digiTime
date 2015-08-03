@@ -15,11 +15,11 @@ Pebble.addEventListener("webviewclosed",
  
     //Send to Pebble, persist there
     Pebble.sendAppMessage(
-      {"bgColor": configuration.bgColor},
-      {"timeColor": configuration.timeColor},
-      {"dateColor": configuration.dateColor},
-      {"weekdayColor": configuration.weekdayColor},
-      {"sundayColor": configuration.sundayColor},
+      {"bgColor": configuration.bgColor,
+      "timeColor": configuration.timeColor,
+      "dateColor": configuration.dateColor,
+      "weekdayColor": configuration.weekdayColor,
+      "sundayColor": configuration.sundayColor},
       function(e) {
         console.log("Sending settings data...");
       },
