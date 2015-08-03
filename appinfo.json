@@ -1,10 +1,10 @@
 {
     "appKeys": {
         "bgColor": 0,
-        "dateColor": 2,
-        "sundayColor": 4,
         "timeColor": 1,
-        "weekdayColor": 3
+        "dateColor": 2,
+        "weekdayColor": 3,
+        "sundayColor": 4
     },
     "capabilities": [
         "configurable"
