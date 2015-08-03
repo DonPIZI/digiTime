@@ -1,6 +1,10 @@
 {
     "appKeys": {
-        "bgColor": 0
+        "bgColor": 0,
+        "dateColor": 2,
+        "sundayColor": 4,
+        "timeColor": 1,
+        "weekdayColor": 3
     },
     "capabilities": [
         "configurable"
@@ -16,32 +20,6 @@
                 "type": "png"
             },
             {
-                "file": "images/lowbat.png",
-                "name": "LOWBATT",
-                "type": "png"
-            },
-            {
-                "file": "images/menu.png",
-                "menuIcon": true,
-                "name": "menu_icon",
-                "type": "png"
-            },
-            {
-                "file": "fonts/SF_Bold.ttf",
-                "name": "SF_BOLD_60",
-                "type": "font"
-            },
-            {
-                "file": "fonts/SF_Bold.ttf",
-                "name": "SF_BOLD_24",
-                "type": "font"
-            },
-            {
-                "file": "fonts/SF_Bold.ttf",
-                "name": "SF_BOLD_62",
-                "type": "font"
-            },
-            {
                 "file": "fonts/SF.ttf",
                 "name": "SF_16",
                 "type": "font"
@@ -55,6 +33,22 @@
                 "file": "fonts/SF.ttf",
                 "name": "SF_18",
                 "type": "font"
+            },
+            {
+                "file": "images/lowbat.png",
+                "name": "LOWBATT",
+                "type": "png"
+            },
+            {
+                "file": "images/menu.png",
+                "menuIcon": true,
+                "name": "menu_icon",
+                "type": "png"
+            },
+            {
+                "file": "fonts/SF_Bold.ttf",
+                "name": "SF_BOLD_62",
+                "type": "font"
             }
         ]
     },
@@ -63,7 +57,7 @@
     "targetPlatforms": [
         "basalt"
     ],
-    "uuid": "7939b9bf-ce12-4d16-996d-b733a72ec179",
+    "uuid": "23f7cc77-fd39-4841-b43f-671b4ac87c22",
     "versionLabel": "1.1",
     "watchapp": {
         "watchface": true
