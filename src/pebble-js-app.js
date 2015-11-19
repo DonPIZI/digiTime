@@ -1,7 +1,7 @@
 Pebble.addEventListener("showConfiguration",
   function(e) {
     //Load the remote config page
-    Pebble.openURL("http://risingdreams.com/other/pebble/digiTime/settings.html");
+    Pebble.openURL("http://risingdreams.com/other/pebble/digiTime/settings2.html");
   }
 );
 

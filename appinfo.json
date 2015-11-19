@@ -1,10 +1,10 @@
 {
     "appKeys": {
         "bgColor": 0,
-        "timeColor": 1,
         "dateColor": 2,
-        "weekdayColor": 3,
-        "sundayColor": 4
+        "sundayColor": 4,
+        "timeColor": 1,
+        "weekdayColor": 3
     },
     "capabilities": [
         "configurable"
@@ -57,8 +57,8 @@
     "targetPlatforms": [
         "basalt"
     ],
-    "uuid": "23f7cc77-fd39-4841-b43f-671b4ac87c22",
-    "versionLabel": "1.1",
+    "uuid": "7939b9bf-ce12-4d16-996d-b733a72ec179",
+    "versionLabel": "1.11",
     "watchapp": {
         "watchface": true
     }
